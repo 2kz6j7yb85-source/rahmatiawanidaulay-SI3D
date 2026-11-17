@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #292929;
+    padding: 20px;
+}
+
+.dashboard {
+    max-width: 1100px;
+    min-height: 680px;
+    margin: auto;
+    padding: 25px;
+    background: #eaf3ff;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 15px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: #0756b5;
+    border-radius: 5px;
+    padding-top: 40px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 13px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #174879;
+}
+
+.sidebar .logout {
+    color: #ffb36d;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.header h1 {
+    color: #174879;
+    font-size: 23px;
+}
+
+.header input {
+    width: 225px;
+    padding: 8px;
+    border: 1px solid #a8bfdc;
+    border-radius: 6px;
+}
+
+/* WELCOME */
+.welcome {
+    background: #0756b5;
+    color: white;
+    padding: 20px 28px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+    min-height: 127px;
+    position: relative;
+}
+
+.welcome h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.welcome p {
+    color: #c9ddf5;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* FOTO PROFIL */
+.avatar {
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    background: #7552e8;
+    margin-right: 45px;
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* CONTENT */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 1.1fr;
+    gap: 12px;
+    margin-bottom: 13px;
+}
+
+.card {
+    background: white;
+    padding: 14px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px #0001;
+}
+
+.card h3 {
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/* STATISTIK */
+.statistics {
+    min-height: 260px;
+}
+
+.chart {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 15px 15px 0;
+    border-bottom: 1px solid #ddd;
+    background: repeating-linear-gradient(
+        to bottom,
+        white 0px,
+        white 35px,
+        #edf0f4 36px
+    );
+}
+
+.bar {
+    width: 35px;
+    background: #0756b5;
+}
+
+.chart-label {
+    display: flex;
+    justify-content: space-around;
+    font-size: 8px;
+    margin-top: 8px;
+}
+
+/* PROGRES KELAS */
+.mini-card {
+    background: #eef7ff;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    font-size: 9px;
+}
+
+.mini-card p {
+    color: #0756b5;
+    margin-top: 5px;
+}
+
+/* AKTIVITAS */
+.activity {
+    background: #eef7ff;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    font-size: 9px;
+}
+
+.activity p {
+    color: #0756b5;
+    margin-top: 5px;
+}
+
+/* LAMPIRAN */
+.attachments {
+    padding: 14px;
+}
+
+.document {
+    background: #eef7ff;
+    padding: 14px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.document a {
+    color: #0756b5;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .dashboard {
+        grid-template-columns: 170px 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .statistics {
+        grid-column: span 2;
+    }
+
+    .avatar {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    .dashboard {
+        display: block;
+        padding: 12px;
+    }
+
+    .sidebar {
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar a {
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header input {
+        width: 100%;
+    }
+
+    .welcome {
+        padding: 17px;
+    }
+
+    .welcome h2 {
+        font-size: 17px;
+    }
+
+    .avatar {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        margin-right: 0;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics {
+        grid-column: auto;
+        background-color: #0756b5;
+    }
+}
